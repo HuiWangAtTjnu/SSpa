@@ -95,19 +95,13 @@ This step includes copying databases from `sdbdatasets` to the corresponding fol
 * The folder `dataset2_ada_edu` indicates that the training set is built using data from the `tourism` and `traffic` databases in `dataset2`, and predictions are made for questions related to the ada and edu databases.
 * The folder `dataset2_tourism_traffic` indicates that the training set is built using data from the `ada` and `edu` databases in `dataset2`, and predictions are made for questions related to the `tourism` and `traffic` databases.
 
+<br>
 
     
     python data_preprocess.py
 
 
-    install default-jre
-    install default-jdk
-    cd third_party/stanfordnlp
-    python data_preprocess.py
-
     
-    python generate_question.py
-
 
  
 Prompt Generation
