@@ -102,7 +102,11 @@ This step includes copying databases from `sdbdatasets` to the corresponding fol
     python data_preprocess.py
 
 
-   
+   The `experiments` folder contains the `results` folder and four types of datasets, which are derived from various combinations of data in the `sdbdatasets` folder (We  also need to extract the compressed files in the folder `experiments`).
+* The folder `dataset1_ada_edu` indicates that the training set is built using data from the `tourism` and `traffic` databases in `dataset1`, and predictions are made for questions related to the `ada` and `edu` databases.
+* The folder `dataset1_tourism_traffic` indicates that the training set is built using data from the `ada` and `edu` databases in `dataset1`, and predictions are made for questions related to the `tourism` and `traffic` databases.
+* The folder `dataset2_ada_edu` indicates that the training set is built using data from the `tourism` and `traffic` databases in `dataset2`, and predictions are made for questions related to the ada and edu databases.
+* The folder `dataset2_tourism_traffic` indicates that the training set is built using data from the `ada` and `edu` databases in `dataset2`, and predictions are made for questions related to the `tourism` and `traffic` databases.
 Prompt Generation
 ------
 This step will generate corresponding prompts for each method (`dail_sql`, `sspa`, `sspa_geo`, `sspa_sdbms`, `sspa_tips`) across different datasets (`dataset1`, `dataset2`) and scenarios (shot-0, shot-1, shot-3, shot-5), and store the generated prompts in the folder `experiments/results`.
