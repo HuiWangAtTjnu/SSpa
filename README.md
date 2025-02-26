@@ -161,7 +161,12 @@ The parameter `dataset` can only be `dataset1` or `dataset2`, the parameter `dat
 
 Statistics
 ------
-   python calculate.py
+This step involves aggregating all the experimental results. The file `experiments/results/statistics.txt` records all the data for the figures and tables presented in the paper.<br>
+  
+    
+    python calculate.py
+
+
+
    
-  The calculate.py script is used to compute the statistics for all experimental results. The data for the charts in the paper is sourced from the file **experiments/results/statistics.txt**.
     
