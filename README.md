@@ -105,6 +105,10 @@ This step includes copying databases from `sdbdatasets` to the corresponding fol
     cd third_party/stanfordnlp
     python data_preprocess.py
 
+    
+    python generate_question.py
+
+
  
 Prompt Generation
 ------
