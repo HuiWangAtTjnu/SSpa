@@ -126,6 +126,10 @@ Taking the method `sspa` as an example. The questions generated using the `sspa`
 As shown in the image below, the `sspa` method created 16 folders to store the generated questions, while the five methods together created a total of 80 folders.
 ![image](https://github.com/HuiWangAtTjnu/SSpa/blob/main/pics/pic1.png)<br>
 
+taking
+
+![image](https://github.com/HuiWangAtTjnu/SSpa/blob/main/pics/pic2.png)<br>
+
 Calling the LLM
 ------
    python ask_llm.py --data_type 1 --algo sspa --shot 5 --model gpt-4-turbo-2024-04-09
