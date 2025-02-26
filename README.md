@@ -112,7 +112,9 @@ This step will generate corresponding prompts for each method (`dail_sql`, `sspa
 
 
 
-Taking the method `sspa` as an example. The prompts generated using the `sspa` method are stored in the folder `experiments/results/sspa`. In this context, `dataset1_ada_edu_shot_5` refers to the case where the `tourism` and `traffic` data from `dataset1` are used as the training set (i.e., `5` examples similar to the target question are selected from `tourism` and `traffic`), and prompts are generated for each question in the `Ada` and `Edu` databases. On the other hand, `dataset1_tourism_traffic_shot_5` refers to the case where the `Ada` and `Edu` data from `dataset1` are used as the training set (i.e., `5` examples similar to the target question are selected from `Ada` and `Edu`), and prompts are generated for each question in the `Tourism` and `Traffic` databases.<br>
+Taking the method `sspa` as an example. The prompts generated using the `sspa` method are stored in the folder `experiments/results/sspa`.<br>
+In this context, `dataset1_ada_edu_shot_5` refers to the case where the `tourism` and `traffic` data from `dataset1` are used as the training set (i.e., `5` examples similar to the target question are selected from `tourism` and `traffic`), and prompts are generated for each question in the `Ada` and `Edu` databases. <br>
+On the other hand, `dataset1_tourism_traffic_shot_5` refers to the case where the `Ada` and `Edu` data from `dataset1` are used as the training set (i.e., `5` examples similar to the target question are selected from `Ada` and `Edu`), and prompts are generated for each question in the `Tourism` and `Traffic` databases.<br><br>
 As shown in the image below, the `sspa` method created 16 folders to store the generated prompts, while the five methods together created a total of 80 folders.
 ![image](https://github.com/HuiWangAtTjnu/T2S4SDB/blob/main/pic/sspa.png)<br>
 
@@ -122,10 +124,12 @@ Calling the LLM
    
   The parameter 'model' refers to the GPT model used in our experiments, specifically 'gpt-4-turbo-2024-04-09'. Additionally, you need to modify the 'api_key' and 'base_url' parameters in **llm/chatgpt.py**.
 
-9. Evaluation
+Evaluation
+------
    python eval2.py --data_type 1 --algo sspa --shot 5
 
-10. Statistics
+Statistics
+------
    python calculate.py
    
   The calculate.py script is used to compute the statistics for all experimental results. The data for the charts in the paper is sourced from the file **experiments/results/statistics.txt**.
