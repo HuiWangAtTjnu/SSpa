@@ -148,7 +148,16 @@ The parameter `dataset` can only be `dataset1` or `dataset2`, the parameter `dat
 
 Evaluation
 ------
-   python eval2.py --data_type 1 --algo sspa --shot 5
+This step involves evaluating the predicted SQL queries using execution accuracy.<br>
+
+    
+    python ask_llm.py --dataset dataset1 --databases ada_edu --algo sspa --shot 5
+
+
+    
+
+ 
+The parameter `dataset` can only be `dataset1` or `dataset2`, the parameter `databases` can only be `ada_edu` or `tourism_traffic`, the parameter `algo` can only be one of the following: `sspa`, `sspa_geo`, `ssap_tips`, `sspa_sdbms`, or `dail_sql`, the parameter `shot` can only be one of the values: `0`, `1`, `3`, or `5`.
 
 Statistics
 ------
