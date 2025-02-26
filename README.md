@@ -118,12 +118,13 @@ Taking the method `sspa` as an example. The questions generated using the `sspa`
 
 * `dataset1_ada_edu_shot_5` refers to the case where the `tourism` and `traffic` data from `dataset1` are used as the training set (i.e., `5` examples similar to the target question are selected from `tourism` and `traffic`), and questions are generated for each origianl question in the `Ada` and `Edu` databases. <br>
 
-* `dataset1_tourism_traffic_shot_5` refers to the case where the `Ada` and `Edu` data from `dataset1` are used as the training set (i.e., `5` examples similar to the target question are selected from `Ada` and `Edu`), and questions are generated for each original question in the `Tourism` and `Traffic` databases.<br><br>
+* `dataset1_tourism_traffic_shot_5` refers to the case where the `Ada` and `Edu` data from `dataset1` are used as the training set (i.e., `5` examples similar to the target question are selected from `Ada` and `Edu`), and questions are generated for each original question in the `Tourism` and `Traffic` databases.
+<br>
 
-![image](https://github.com/HuiWangAtTjnu/SSpa/blob/main/pics/pic1.png)<br>
+
 
 As shown in the image below, the `sspa` method created 16 folders to store the generated questions, while the five methods together created a total of 80 folders.
-
+![image](https://github.com/HuiWangAtTjnu/SSpa/blob/main/pics/pic1.png)<br>
 
 Calling the LLM
 ------
