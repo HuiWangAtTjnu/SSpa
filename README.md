@@ -2,7 +2,7 @@
 Overview
 =
 
-The data and code were created for the review of the paper titled "GPT-Based Spatial Database Text-to-SQL Conversion". The code is adapted from [DAIL-SQL](https://github.com/BeachWang/DAIL-SQL).
+The data and code were created for the review of the paper titled "GPT-Based Text-to-SQL for Spatial Databases". 
 
 Datasets
 =
@@ -162,6 +162,11 @@ The parameter `dataset` can only be `dataset1` or `dataset2`, the parameter `dat
 Statistics
 ------
 This step involves aggregating all the experimental results. The file `experiments/results/statistics.txt` records all the data for the figures and tables presented in the paper.<br>
+
+Acknowledgement
+------
+
+The code is inspired by [DAIL-SQL](https://github.com/BeachWang/DAIL-SQL).
   
     
     python calculate.py
