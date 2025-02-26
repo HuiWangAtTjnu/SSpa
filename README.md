@@ -114,10 +114,9 @@ This step will generate corresponding questions for each method (`dail_sql`, `ss
 
 
 
-This step will create 80 folders (5 methods, with 16 folders created for each method). Taking the 'sspa' method as an example, as shown in the figure below.<br>
+This step will create 80 folders (5 methods, with 16 folders created for each method). Taking the `sspa` method as an example, as shown in the figure below.<br>
 ![image](https://github.com/HuiWangAtTjnu/SSpa/blob/main/pics/pic1.png)<br>
 
-" the method `sspa` as an example. The questions generated using the `sspa` method are stored in the folder `experiments/results/sspa`.<br>
 
 * `dataset1_ada_edu_shot_5` refers to the case where the `tourism` and `traffic` data from `dataset1` are used as the training set (i.e., `5` examples similar to the target question are selected from `tourism` and `traffic`), and questions are generated for each origianl question in the `Ada` and `Edu` databases. <br>
 
@@ -126,10 +125,8 @@ This step will create 80 folders (5 methods, with 16 folders created for each me
 
 
 
-As shown in the image below, the `sspa` method created 16 folders to store the generated questions, while the five methods together created a total of 80 folders.
-![image](https://github.com/HuiWangAtTjnu/SSpa/blob/main/pics/pic1.png)<br>
+The following figure shows the files within the folder `dataset1_ada_edu_shot_5`, where ·questions.json· is used to store the generated questions.<br>
 
-taking
 
 ![image](https://github.com/HuiWangAtTjnu/SSpa/blob/main/pics/pic2.png)<br>
 
