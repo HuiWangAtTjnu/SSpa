@@ -53,14 +53,7 @@ In `dataset2`, there are also four databases: `ada`, `edu`, `tourism`, and `traf
 * The `ada`, `edu`, and `traffic` databases in `dataset2`  are derived from the corresponding databases in `dataset1`  by removing the derived columns.  
 * The questions in both `dataset1`  and `dataset2`  are identical for each database.
 
-Experiments
-=
 
-The `experiments` folder contains the `results` folder and four types of datasets, which are derived from various combinations of data in the `sdbdatasets` folder (We  also need to extract the compressed files in the folder `experiments`).
-* The folder `dataset1_ada_edu` indicates that the training set is built using data from the `tourism` and `traffic` databases in `dataset1`, and predictions are made for questions related to the `ada` and `edu` databases.
-* The folder `dataset1_tourism_traffic` indicates that the training set is built using data from the `ada` and `edu` databases in `dataset1`, and predictions are made for questions related to the `tourism` and `traffic` databases.
-* The folder `dataset2_ada_edu` indicates that the training set is built using data from the `tourism` and `traffic` databases in `dataset2`, and predictions are made for questions related to the ada and edu databases.
-* The folder `dataset2_tourism_traffic` indicates that the training set is built using data from the `ada` and `edu` databases in `dataset2`, and predictions are made for questions related to the `tourism` and `traffic` databases.
 
 
 Environment Setup
@@ -106,6 +99,11 @@ This step includes copying databases from `sdbdatasets` to the corresponding fol
     
     python data_preprocess.py
 
+
+    install default-jre
+    install default-jdk
+    cd third_party/stanfordnlp
+    python data_preprocess.py
 
  
 Prompt Generation
