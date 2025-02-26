@@ -7,7 +7,9 @@ The data and code were created for the review of the paper titled "GPT-Based Spa
 Datasets
 =
 
-The folder `sdbdatasets` contains the datasets we created specifically for spatial databases, including `dataset1` and `dataset2`. <br>
+The folder `sdbdatasets` contains the datasets we created specifically for spatial databases, including `dataset1` and `dataset2`.<br>
+
+In `dataset1`, there are four databases: `ada`, `edu`, `tourism`, and `traffic`. Taking the folder `ada` as an example:
 * The file `ada.sqlite` is an SQLite database file (We can use [spatialite-gui](https://www.gaia-gis.it/fossil/spatialite_gui/index), an open-source graphical user interface tool, to manage SQLite database files). <br>
 * The file `ada.table.csv` contains geographic region descriptions for each database table, supporting both Chinese and English. <br>
 * The file `QA-ada-56.txt` stores questions and answers based on the ada database. <br>
