@@ -162,6 +162,11 @@ The parameter `dataset` can only be `dataset1` or `dataset2`, the parameter `dat
 Statistics
 ------
 This step involves aggregating all the experimental results. The file `experiments/results/statistics.txt` records all the data for the figures and tables presented in the paper.<br>
+ 
+    
+    python calculate.py
+
+
 
 Acknowledgement
 ------
@@ -172,6 +177,7 @@ The code is inspired by [DAIL-SQL](https://github.com/BeachWang/DAIL-SQL).
     python calculate.py
 
 
-
-   
+References
+------
+Gao, D., et al. 2024. Text-to-SQL empowered by large language models: A benchmark evaluation. Proceedings of the VLDB Endowment, 17(5), 1132–1145.
     
