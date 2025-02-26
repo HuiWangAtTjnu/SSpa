@@ -114,7 +114,7 @@ This step will generate corresponding questions for each method (`dail_sql`, `ss
 
 
 
-This step will create 80 folders. Taking the 'sspa' method as an example, it will create 16 folders (as shown in the figure below).<br>
+This step will create 80 folders (5 methods, with 16 folders created for each method). Taking the 'sspa' method as an example, as shown in the figure below.<br>
 ![image](https://github.com/HuiWangAtTjnu/SSpa/blob/main/pics/pic1.png)<br>
 
 " the method `sspa` as an example. The questions generated using the `sspa` method are stored in the folder `experiments/results/sspa`.<br>
