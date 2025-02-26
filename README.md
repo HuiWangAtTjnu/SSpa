@@ -172,9 +172,6 @@ Acknowledgement
 ------
 
 The code is inspired by [DAIL-SQL](https://github.com/BeachWang/DAIL-SQL).
-  
-    
-    python calculate.py
 
 
 References
