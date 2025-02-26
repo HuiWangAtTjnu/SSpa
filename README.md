@@ -134,7 +134,8 @@ Calling the LLM
 ------
    python ask_llm.py --data_type 1 --algo sspa --shot 5 --model gpt-4-turbo-2024-04-09
    
-  The parameter 'model' refers to the GPT model used in our experiments, specifically 'gpt-4-turbo-2024-04-09'. Additionally, you need to modify the 'api_key' and 'base_url' parameters in **llm/chatgpt.py**.
+This step involves sending the questions generated in the previous step to the LLM in order to generate the corresponding SQL queries. Since there are 80 folders in total, processing them all at once can be time-consuming. Therefore, the questions from each folder can be sent to the LLM individually, and the results will be stored in the respective 'answers.json' file within each folder."
+The parameter 'model' refers to the GPT model used in our experiments, specifically 'gpt-4-turbo-2024-04-09'. Additionally, you need to modify the 'api_key' and 'base_url' parameters in **llm/chatgpt.py**.
 
 Evaluation
 ------
