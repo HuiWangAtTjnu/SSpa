@@ -88,7 +88,7 @@ Environment Setup
 
 
 
-   You also can refer to the installation steps in [DAIL-SQL](https://github.com/BeachWang/DAIL-SQL).
+   You can also refer to the installation steps in [DAIL-SQL](https://github.com/BeachWang/DAIL-SQL).
 
 Run
 ======
