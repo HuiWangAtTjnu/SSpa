@@ -90,7 +90,6 @@ Data Preprocess
 ------
 This step includes copying databases from `sdbdatasets` to the corresponding folders (`experiments/dataset1_ada_edu`, `experiments/dataset1_tourism_traffic`,  `experiments/dataset2_ada_edu`, and `experiments/dataset2_tourism_traffic`) and applying required processing operations.<br>
 
-The `experiments` folder contains the `results` folder and four types of datasets, which are derived from various combinations of data in the `sdbdatasets` folder (We  also need to extract the compressed files in the folder `experiments`).
 
 * The folder `dataset1_ada_edu` indicates that the training set is built using data from the `tourism` and `traffic` databases in `dataset1`, and predictions are made for questions related to the `ada` and `edu` databases.
 * The folder `dataset1_tourism_traffic` indicates that the training set is built using data from the `ada` and `edu` databases in `dataset1`, and predictions are made for questions related to the `tourism` and `traffic` databases.
@@ -108,21 +107,23 @@ The `experiments` folder contains the `results` folder and four types of dataset
  
 Prompt Generation
 ------
-This step will generate corresponding prompts for each method (`dail_sql`, `sspa`, `sspa_geo`, `sspa_sdbms`, `sspa_tips`) across different datasets (`dataset1`, `dataset2`) and scenarios (shot-0, shot-1, shot-3, shot-5), and store the generated prompts in the folder `experiments/results`.
+This step will generate corresponding questions for each method (`dail_sql`, `sspa`, `sspa_geo`, `sspa_sdbms`, `sspa_tips`) across different datasets (`dataset1`, `dataset2`) and scenarios (shot-0, shot-1, shot-3, shot-5), and store the generated questions in the folder `experiments/results`.
 
     
     python generate_question.py
 
 
 
-Taking the method `sspa` as an example. The prompts generated using the `sspa` method are stored in the folder `experiments/results/sspa`.<br>
+Taking the method `sspa` as an example. The questions generated using the `sspa` method are stored in the folder `experiments/results/sspa`.<br>
 
-* `dataset1_ada_edu_shot_5` refers to the case where the `tourism` and `traffic` data from `dataset1` are used as the training set (i.e., `5` examples similar to the target question are selected from `tourism` and `traffic`), and prompts are generated for each question in the `Ada` and `Edu` databases. <br>
+* `dataset1_ada_edu_shot_5` refers to the case where the `tourism` and `traffic` data from `dataset1` are used as the training set (i.e., `5` examples similar to the target question are selected from `tourism` and `traffic`), and questions are generated for each origianl question in the `Ada` and `Edu` databases. <br>
 
-* `dataset1_tourism_traffic_shot_5` refers to the case where the `Ada` and `Edu` data from `dataset1` are used as the training set (i.e., `5` examples similar to the target question are selected from `Ada` and `Edu`), and prompts are generated for each question in the `Tourism` and `Traffic` databases.<br><br>
+* `dataset1_tourism_traffic_shot_5` refers to the case where the `Ada` and `Edu` data from `dataset1` are used as the training set (i.e., `5` examples similar to the target question are selected from `Ada` and `Edu`), and questions are generated for each original question in the `Tourism` and `Traffic` databases.<br><br>
 
-As shown in the image below, the `sspa` method created 16 folders to store the generated prompts, while the five methods together created a total of 80 folders.
-![image](https://github.com/HuiWangAtTjnu/T2S4SDB/blob/main/pic/sspa.png)<br>
+![image](https://github.com/HuiWangAtTjnu/SSpa/blob/main/pics/pic1.png)<br>
+
+As shown in the image below, the `sspa` method created 16 folders to store the generated questions, while the five methods together created a total of 80 folders.
+
 
 Calling the LLM
 ------
