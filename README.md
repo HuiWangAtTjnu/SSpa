@@ -134,7 +134,7 @@ Calling the LLM
 ------
 
    
-This step involves sending the questions generated in the previous step to the LLM in order to generate the corresponding SQL queries. Since there are 80 folders in total, processing them all at once can be time-consuming. Therefore, the questions from each folder can be sent to the LLM individually, and the results will be stored in the respective `answers.json` file within each folder.
+This step involves sending the questions generated in the previous step to the LLM in order to generate the corresponding SQL queries. Since there are 80 folders in total, processing them all at once can be time-consuming. Therefore, the questions from each folder can be sent to the LLM individually, and the results will be stored in the respective `answers.json` file within each folder (as shown in the figure above).
 <br>
 
     
@@ -144,7 +144,7 @@ This step involves sending the questions generated in the previous step to the L
     
 
  
-The parameter 'model' refers to the GPT model used in our experiments, specifically 'gpt-4-turbo-2024-04-09'. Additionally, you need to modify the 'api_key' and 'base_url' parameters in **llm/chatgpt.py**.\
+The parameter `dataset` can only be `dataset1` or `dataset2`, the parameter `databases` can only be `ada_edu` or `tourism_traffic`, the parameter `algo` can only be one of the following: `sspa`, `sspa_geo`, `ssap_tips`, `sspa_sdbms`, or `dail_sql`, the parameter `shot` can only be one of the values: `0`, `1`, `3`, or `5`, and the `model` parameter refers to the LLM being used, which in this case is `gpt-4-turbo-2024-04-09`. Additionally, you need to modify the `api_key` and `base_url` parameters in the file `llm/chatgpt.py`.
 
 Evaluation
 ------
