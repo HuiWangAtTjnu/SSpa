@@ -112,7 +112,7 @@ This step will generate corresponding prompts for each method (dail_sql, sspa, s
 
 
 
-The prompts generated using the `sspa` method are stored in the folder `experiments/results/sspa`. In this context, `dataset1_ada_edu_shot_5` refers to the case where the `tourism` and `traffic` data from `dataset1` are used as the training set (i.e., 5 examples similar to the target question are selected from `tourism` and `traffic`), and prompts are generated for each question in the `Ada` and `Edu` datasets. On the other hand, `dataset1_tourism_traffic_shot_5` refers to the case where the `Ada` and `Edu` data from `dataset1` are used as the training set (i.e., 5 examples similar to the target question are selected from `Ada` and `Edu`), and prompts are generated for each question in the `Tourism` and `Traffic` datasets.<br>
+The prompts generated using the `sspa` method are stored in the folder `experiments/results/sspa`. In this context, `dataset1_ada_edu_shot_5` refers to the case where the `tourism` and `traffic` data from `dataset1` are used as the training set (i.e., 5 examples similar to the target question are selected from `tourism` and `traffic`), and prompts are generated for each question in the `Ada` and `Edu` databases. On the other hand, `dataset1_tourism_traffic_shot_5` refers to the case where the `Ada` and `Edu` data from `dataset1` are used as the training set (i.e., 5 examples similar to the target question are selected from `Ada` and `Edu`), and prompts are generated for each question in the `Tourism` and `Traffic` databases.<br>
 ![image](https://github.com/HuiWangAtTjnu/T2S4SDB/blob/main/pic/sspa.png)<br>
 8. Calling the LLM
 
