@@ -14,7 +14,7 @@ In `dataset1`, there are four databases (folders): `ada`, `edu`, `tourism`, and 
 * The file `ada.table.csv` contains geographic region descriptions for each database table, supporting both Chinese and English. <br>
 * The file `QA-ada-56.txt` stores questions and answers based on the `ada` database. <br>
 
-Below is an example from the file `QA-ada-56.txt`: <br>
+Below is two examples from the file `QA-ada-56.txt`: <br>
 
      label:G S
      questionCHI:请问太湖的面积是多少？
@@ -25,7 +25,10 @@ Below is an example from the file `QA-ada-56.txt`: <br>
      name:Lake Tai is represented by the name '太湖'.
      SQL: Select Sum(Area)  from lakes where name = '太湖'  %%% Select Sum(Area(Shape, 1))   from lakes where name = '太湖'
      Eval: Select Sum(Area)  from lakes where name = '太湖'  %%% Select Sum(Area(Shape, 1))   from lakes where name = '太湖'
-     id: ada01label:Intersection S
+     id: ada01
+     <br>
+     <br>
+     label:Intersection S
      questionCHI:每个省内1级河流的总长度是多少？
      evidenceCHI:一条河流由多个同名河段组成，应计算其在各省境内的交汇部分长度。
      nameCHI:
@@ -34,7 +37,7 @@ Below is an example from the file `QA-ada-56.txt`: <br>
      name:
      SQL:Select provinces.name, Sum(GLength(Intersection(provinces.Shape, rivers.Shape), 1))  from provinces inner join rivers On Intersects(provinces.Shape, rivers.Shape) = 1 where level_river = 1 group by provinces.name %%% Select cities.province, Sum(GLength(Intersection(cities.Shape, rivers.Shape), 1))  from cities inner join rivers On Intersects(cities.Shape, rivers.Shape) = 1 where level_river = 1 group by cities.province
      Eval:Select provinces.name, Sum(GLength(Intersection(provinces.Shape, rivers.Shape), 1))  from provinces inner join rivers On Intersects(provinces.Shape, rivers.Shape) = 1 where level_river = 1 group by provinces.name %%% Select cities.province, Sum(GLength(Intersection(cities.Shape, rivers.Shape), 1))  from cities inner join rivers On Intersects(cities.Shape, rivers.Shape) = 1 where level_river = 1 group by cities.province %%% Select provinces.name, Sum(GLength(Intersection(rivers.Shape, provinces.Shape), 1))  from provinces inner join rivers On Intersects(provinces.Shape, rivers.Shape) = 1 where level_river = 1 group by provinces.name %%% Select cities.province, Sum(GLength(Intersection(rivers.Shape, cities.Shape), 1))  from cities inner join rivers On Intersects(cities.Shape, rivers.Shape) = 1 where level_river = 1 group by cities.province
-     id: ada34
+     id: ada34<br>
  
 
 
