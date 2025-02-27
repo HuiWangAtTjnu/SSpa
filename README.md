@@ -166,7 +166,7 @@ The command `python eval.py --dataset dataset1 --databases ada_edu --algo sspa -
 
 Statistics
 ------
-This step involves aggregating all the experimental results. The file `experiments/results/statistics.txt` records all the data for the figures and tables presented in the paper.<br>
+We have placed all the results generated during the experiment in the `experiments/results` folder. This step will analyze the experimental results in the `experiments/results` folder and store the final statistics in the `experiments/results/statistics.txt` file. The file `experiments/results/statistics.txt` records all the data for the figures and tables presented in the paper.<br>
  
     
     python calculate.py
