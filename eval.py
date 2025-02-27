@@ -39,40 +39,29 @@ def execute_model(predicted_sql,ground_truth, db_place, idx):
     return result
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--data_type", type=int, choices=[1, 2, 3, 4],  required=True)
-    parser.add_argument("--algo", type=str, choices=["dail_sql", "sspa", "sspa_tips", "sspa_sdbms", "sspa_geo"], default="sspa",  required=True)
-    parser.add_argument("--shot", type=int, choices=[0, 1, 3, 5],  required=True)
-    # data_type = 1: dataset 1      train set: tourism&traffic              dev set:ada&edu
-    # data_type = 2: dataset 1      train set: ada&edu                      dev set:tourism&traffic
-    # data_type = 3: dataset 2      train set: tourism&traffic              dev set:ada&edu
-    # data_type = 4: dataset 2      train set: ada&edu                      dev set:tourism&traffic
-    args = parser.parse_args()
-    
-    data_type = args.data_type
-    algo = args.algo
-    shot = args.shot
+    # parser = argparse.ArgumentParser()
+    # parser.add_argument("--dataset", type=str, choices=['dataset1', 'dataset2'],  required=True)
+    # parser.add_argument("--databases", type=str, choices=['ada_edu', 'tourism_traffic'],  required=True)
+    # parser.add_argument("--algo", type=str, choices=["dail_sql", "sspa", "sspa_tips", "sspa_sdbms", "sspa_geo"], default="sspa",  required=True)
+    # parser.add_argument("--shot", type=int, choices=[0, 1, 3, 5],  required=True)
+
+    # args = parser.parse_args()
+    # #
+    # dataset = args.dataset
+    # databases = args.databases
+    # algo = args.algo
+    # shot = args.shot
     #
-    # data_type = 1
-    # algo = 'sspa'
-    # shot = 5
+    dataset = 'dataset1'
+    databases = 'ada_edu'
+    algo = 'sspa'
+    shot = '5'
+
     
-    if data_type == 1:
-        db_dir = './experiments/dataset1_ada_edu'
-        question_dir = f'./experiments/results/{algo}/dataset1_ada_edu_shot_{shot}'
-    elif data_type == 2:
-        db_dir = './experiments/dataset1_tourism_traffic'
-        question_dir = f'./experiments/results/{algo}/dataset1_tourism_traffic_shot_{shot}'
-    elif data_type == 3:
-        db_dir = './experiments/dataset2_ada_edu'
-        question_dir = f'./experiments/results/{algo}/dataset2_ada_edu_shot_{shot}'
-    elif data_type == 4:
-        db_dir = './experiments/dataset2_tourism_traffic'
-        question_dir = f'./experiments/results/{algo}/dataset2_tourism_traffic_shot_{shot}'
-    else:
-        assert(data_type == 1 or data_type == 2 or data_type == 3 or data_type == 4)
-        
-    evaluationf = open(f'{question_dir}/evaluations.txt', 'a', encoding = 'utf-8')
+    db_dir = f'./experiments/{dataset}_{databases}/'
+    question_dir = f'./experiments/results/{algo}/{dataset}_{databases}_shot_{shot}'
+    
+    evaluationf = open(f'{question_dir}/evaluations.txt', 'w', encoding = 'utf-8')
 
     predicted_sql_path = f'{question_dir}/answers.json'
     predicted_dict = {}

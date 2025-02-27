@@ -52,18 +52,18 @@ def compute(txtpath, geoset):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--sdbpath", type=str, default="./sdbdatasets/")
-    parser.add_argument("--resultspath", type=str, default="./experiments/results/")
-    args = parser.parse_args()
+    # parser = argparse.ArgumentParser()
+    # parser.add_argument("--sdbpath", type=str, default="./sdbdatasets/")
+    # parser.add_argument("--resultspath", type=str, default="./experiments/results/")
+    # args = parser.parse_args()
     
-    sdbpath = args.sdbpath
-    resultspath = args.resultspath
+    # sdbpath = args.sdbpath
+    # resultspath = args.resultspath
     sdbs = ['dataset1', 'dataset2']
     dbs = ['ada', 'edu', 'tourism', 'traffic']
     
-    # sdbpath = './sdbdatasets/'
-    # resultspath = './experiments/results/'
+    sdbpath = './sdbdatasets/'
+    resultspath = './experiments/results/'
     logf = open(f'{resultspath}/statistics.txt', 'w', encoding = 'utf-8')
     #
     rangeset = set()

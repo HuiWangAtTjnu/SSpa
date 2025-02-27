@@ -35,43 +35,28 @@ def get_table_names(db_path = None):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data_type", type=int, choices=[1, 2, 3, 4],  required=True)
+    parser.add_argument("--dataset", type=str, choices=['dataset1', 'dataset2'],  required=True)
+    parser.add_argument("--databases", type=str, choices=['ada_edu', 'tourism_traffic'],  required=True)
     parser.add_argument("--algo", type=str, choices=["dail_sql", "sspa", "sspa_tips", "sspa_sdbms", "sspa_geo"], default="sspa",  required=True)
-    parser.add_argument("--model", type=str, default="gpt-4-turbo-2024-04-09")
     parser.add_argument("--shot", type=int, choices=[0, 1, 3, 5],  required=True)
-    # data_type = 1: dataset 1      train set: tourism&traffic              dev set:ada&edu
-    # data_type = 2: dataset 1      train set: ada&edu                      dev set:tourism&traffic
-    # data_type = 3: dataset 2      train set: tourism&traffic              dev set:ada&edu
-    # data_type = 4: dataset 2      train set: ada&edu                      dev set:tourism&traffic
+    parser.add_argument("--model", type=str, default="gpt-4-turbo-2024-04-09")
     args = parser.parse_args()
-    
-    data_type = args.data_type
-    algo = args.algo
-    model = args.model
-    shot = args.shot
     #
-    # data_type = 1
+    dataset = args.dataset
+    databases = args.databases
+    algo = args.algo
+    shot = args.shot
+    model = args.model
+    #
+    # dataset = 'dataset1'
+    # databases = 'ada_edu'
     # algo = 'sspa'
+    # shot = '5'
     # model = 'gpt-4-turbo-2024-04-09'
-    # shot = 5
     
-    if data_type == 1:
-        db_dir = './experiments/dataset1_ada_edu/databases'
-        question_dir = f'./experiments/results/{algo}/dataset1_ada_edu_shot_{shot}'
-    elif data_type == 2:
-        db_dir = './experiments/dataset1_tourism_traffic/databases'
-        question_dir = f'./experiments/results/{algo}/dataset1_tourism_traffic_shot_{shot}'
-    elif data_type == 3:
-        db_dir = './experiments/dataset2_ada_edu/databases'
-        question_dir = f'./experiments/results/{algo}/dataset2_ada_edu_shot_{shot}'
-    elif data_type == 4:
-        db_dir = './experiments/dataset2_tourism_traffic/databases'
-        question_dir = f'./experiments/results/{algo}/dataset2_tourism_traffic_shot_{shot}'
-    else:
-        assert(data_type == 1 or data_type == 2 or data_type == 3 or data_type == 4)
-        
-    # db_dir = r'./dataset/bird/databases'
-    # question_dir = r'./dataset/process'
+    db_dir = f'./experiments/{dataset}_{databases}/databases'
+    question_dir = f'./experiments/results/{algo}/{dataset}_{databases}_shot_{shot}'
+    
     #
     db_dict = {}
     db_names = ['ada', 'edu', 'tourism', 'traffic']
