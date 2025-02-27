@@ -10,7 +10,7 @@ Datasets
 The folder `sdbdatasets` contains the datasets we created specifically for spatial databases, including `dataset1` and `dataset2`.<br>
 
 In `dataset1`, there are four databases (folders): `ada`, `edu`, `tourism`, and `traffic`. Taking the folder `ada` as an example:
-* The file `ada.sqlite` is an SQLite database file (We can use [spatialite-gui](https://www.gaia-gis.it/fossil/spatialite_gui/index), an open-source graphical user interface tool, to manage SQLite database files). <br>
+* The file `ada.sqlite` is an SQLite database file (We can use [spatialite-gui](http://www.gaia-gis.it/gaia-sins/windows-bin-amd64-latest/spatialite_gui-NG-5.0.0-win-amd64.7z), an open-source graphical user interface tool, to manage SQLite database files). <br>
 * The file `ada.table.csv` contains geographic region descriptions for each database table, supporting both Chinese and English. <br>
 * The file `QA-ada-56.txt` stores questions and answers based on the `ada` database. <br>
 
@@ -83,6 +83,10 @@ Environment Setup
 
 
    You can also refer to the installation steps in [DAIL-SQL](https://github.com/BeachWang/DAIL-SQL).
+
+   Finally, to use [SpatiaLite](https://www.gaia-gis.it/gaia-sins/), we need refer to its official website.
+
+On Windows, first download [mod_spatialite-5.1.0-win-amd64.7z](http://www.gaia-gis.it/gaia-sins/windows-bin-amd64/mod_spatialite-5.1.0-win-amd64.7z ), extract it, and add the path to the Windows system's `Path` environment variable.
 
 Run
 ======
