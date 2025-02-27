@@ -26,8 +26,10 @@ Below is two examples from the file `QA-ada-56.txt`: <br>
      SQL: Select Sum(Area)  from lakes where name = '太湖'  %%% Select Sum(Area(Shape, 1))   from lakes where name = '太湖'
      Eval: Select Sum(Area)  from lakes where name = '太湖'  %%% Select Sum(Area(Shape, 1))   from lakes where name = '太湖'
      id: ada01
-     <br>
-     <br>
+     
+
+
+     
      label:Intersection S
      questionCHI:每个省内1级河流的总长度是多少？
      evidenceCHI:一条河流由多个同名河段组成，应计算其在各省境内的交汇部分长度。
@@ -56,7 +58,7 @@ The meaning of each field is as follows:
      |evidenceCHI | The Chinese translation of the 'evidence' field.
      |nameCHI     | The Chinese translation of the 'name' field.
      |SQL         | The SQL query corresponding to the 'question' field. Due to derived columns, there may be multiple SQL queries, separated by '%%%'. 
-     |Eval        | SQL queries corresponding to all results. When evaluating the predicted SQL queries with execution accuracy, results like 'Area(Intersection(a.Shape, b.Shape) 1)' and 'Area(Intersection(b.Shape, a.Shape) 1)' may differ. 
+     |Eval        | SQL queries corresponding to all results. When evaluating the predicted SQL queries with execution accuracy, results like 'GLength(Intersection(rivers.Shape, cities.Shape), 1)' and 'GLength(Intersection(cities.Shape, rivers.Shape), 1)' may differ. 
      |id          | The unique ID for the question.  
 
 
@@ -119,7 +121,7 @@ This step includes copying databases from `sdbdatasets` to the corresponding fol
  
 Prompt Generation
 ------
-This step will generate corresponding questions for each method (`dail_sql`, `sspa`, `sspa_geo`, `sspa_sdbms`, `sspa_tips`) across different datasets (`dataset1`, `dataset2`) and scenarios (shot-0, shot-1, shot-3, shot-5), and store the generated questions in the folder `experiments/results`.
+This step will generate corresponding questions for each method (`dail_sql`, `sspa`, `sspa_geo`, `sspa_sdbms`, `sspa_tips`) across different datasets (`dataset1_ada_edu`, `dataset1_tourism_traffic`, `dataset2_ada_edu`, `dataset2_tourism_traffic`) and scenarios (shot-0, shot-1, shot-3, shot-5), and store the generated questions in the folder `experiments/results`.
 
     
     python generate_question.py
