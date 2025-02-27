@@ -39,7 +39,7 @@ Below is two examples from the file `QA-ada-56.txt`: <br>
      name:
      SQL:Select provinces.name, Sum(GLength(Intersection(provinces.Shape, rivers.Shape), 1))  from provinces inner join rivers On Intersects(provinces.Shape, rivers.Shape) = 1 where level_river = 1 group by provinces.name %%% Select cities.province, Sum(GLength(Intersection(cities.Shape, rivers.Shape), 1))  from cities inner join rivers On Intersects(cities.Shape, rivers.Shape) = 1 where level_river = 1 group by cities.province
      Eval:Select provinces.name, Sum(GLength(Intersection(provinces.Shape, rivers.Shape), 1))  from provinces inner join rivers On Intersects(provinces.Shape, rivers.Shape) = 1 where level_river = 1 group by provinces.name %%% Select cities.province, Sum(GLength(Intersection(cities.Shape, rivers.Shape), 1))  from cities inner join rivers On Intersects(cities.Shape, rivers.Shape) = 1 where level_river = 1 group by cities.province %%% Select provinces.name, Sum(GLength(Intersection(rivers.Shape, provinces.Shape), 1))  from provinces inner join rivers On Intersects(provinces.Shape, rivers.Shape) = 1 where level_river = 1 group by provinces.name %%% Select cities.province, Sum(GLength(Intersection(rivers.Shape, cities.Shape), 1))  from cities inner join rivers On Intersects(cities.Shape, rivers.Shape) = 1 where level_river = 1 group by cities.province
-     id: ada34<br>
+     id: ada34
  
 
 
