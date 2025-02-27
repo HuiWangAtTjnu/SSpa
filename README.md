@@ -147,7 +147,7 @@ This step involves sending the questions (prompts) generated in the previous ste
  
 The parameter `dataset` can only be `dataset1` or `dataset2`, the parameter `databases` can only be `ada_edu` or `tourism_traffic`, the parameter `algo` can only be one of the following: `sspa`, `sspa_geo`, `ssap_tips`, `sspa_sdbms`, or `dail_sql`, the parameter `shot` can only be one of the values: `0`, `1`, `3`, or `5`, and the `model` parameter refers to the LLM being used, which in this case is `gpt-4-turbo-2024-04-09`. Additionally, you need to modify the `api_key` and `base_url` parameters in the file `llm/chatgpt.py`.<br><br>
 
-The command python `ask_llm.py --dataset dataset1 --databases ada_edu --algo sspa --shot 5 --model gpt-4-turbo-2024-04-09` is used to send the questions (prompts) from the `questions.json` file located under the `experiments/results/sspa/dataset1_ada_edu_shot_5` folder to the LLM, and then save the predicted SQL queries to the `answers.json` file.
+The command `python ask_llm.py --dataset dataset1 --databases ada_edu --algo sspa --shot 5 --model gpt-4-turbo-2024-04-09` is used to send the questions (prompts) from the `questions.json` file located under the `experiments/results/sspa/dataset1_ada_edu_shot_5` folder to the LLM, and then save the predicted SQL queries to the `answers.json` file.
 
 Evaluation
 ------
