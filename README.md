@@ -82,11 +82,13 @@ Environment Setup
 
 
 
-   You can also refer to the installation steps in [DAIL-SQL](https://github.com/BeachWang/DAIL-SQL).
+You can also refer to the installation steps in [DAIL-SQL](https://github.com/BeachWang/DAIL-SQL).
+   <br><br>
 
-   Finally, to use [SpatiaLite](https://www.gaia-gis.it/gaia-sins/), we need refer to its official website.
+Finally, to use [SpatiaLite](https://www.gaia-gis.it/gaia-sins/), we need refer to its official website.
+![image](https://github.com/HuiWangAtTjnu/SSpa/blob/main/pics/pic3.png)<br>
 
-On Windows, first download [mod_spatialite-5.1.0-win-amd64.7z](http://www.gaia-gis.it/gaia-sins/windows-bin-amd64/mod_spatialite-5.1.0-win-amd64.7z ), extract it, and add the path to the Windows system's `Path` environment variable.
+On Windows, first download [mod_spatialite-5.1.0-win-amd64.7z](http://www.gaia-gis.it/gaia-sins/windows-bin-amd64/mod_spatialite-5.1.0-win-amd64.7z ), extract it, and add the path to the Windows's `Path` `Environment Variable`.
 
 Run
 ======
