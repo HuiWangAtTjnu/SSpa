@@ -88,7 +88,7 @@ You can also refer to the installation steps in [DAIL-SQL](https://github.com/Be
 Finally, to use [SpatiaLite](https://www.gaia-gis.it/gaia-sins/), we need refer to its official website.
 ![image](https://github.com/HuiWangAtTjnu/SSpa/blob/main/pics/pic3.png)<br>
 
-On Windows, first download [mod_spatialite-5.1.0-win-amd64.7z](http://www.gaia-gis.it/gaia-sins/windows-bin-amd64/mod_spatialite-5.1.0-win-amd64.7z ), extract it, and add the path to the Windows's `Path` `Environment Variable`.
+On Windows, first download [mod_spatialite-5.1.0-win-amd64.7z](http://www.gaia-gis.it/gaia-sins/windows-bin-amd64/mod_spatialite-5.1.0-win-amd64.7z ), extract it, and add the path to the Windows's `Path` Environment Variable.
 
 Run
 ======
@@ -114,7 +114,7 @@ This step includes copying databases from `sdbdatasets` to the corresponding fol
  
 Prompt Generation
 ------
-This step will generate corresponding questions (prompts) for each method (`dail_sql`, `sspa`, `sspa_geo`, `sspa_sdbms`, `sspa_tips`) across different datasets (`dataset1_ada_edu`, `dataset1_tourism_traffic`, `dataset2_ada_edu`, `dataset2_tourism_traffic`) and scenarios (shot-0, shot-1, shot-3, shot-5), and store the generated questions (prompts) in the folder `experiments/results`.
+This step will generate corresponding questions (prompts) for each method (`dail_sql`, `sspa`, `sspa_geo`, `sspa_sdbms`, `sspa_tips`) across different datasets (`dataset1_ada_edu`, `dataset1_tourism_traffic`, `dataset2_ada_edu`, `dataset2_tourism_traffic`) and scenarios (shot-0, shot-1, shot-3, shot-5), and store the generated questions (prompts) in the folder `experiments/results`. This step runs on a standard laptop and takes approximately 30 minutes to complete.
 
     
     python generate_question.py
