@@ -121,7 +121,7 @@ This step includes copying databases from `sdbdatasets` to the corresponding fol
  
 Prompt Generation
 ------
-This step will generate corresponding questions for each method (`dail_sql`, `sspa`, `sspa_geo`, `sspa_sdbms`, `sspa_tips`) across different datasets (`dataset1_ada_edu`, `dataset1_tourism_traffic`, `dataset2_ada_edu`, `dataset2_tourism_traffic`) and scenarios (shot-0, shot-1, shot-3, shot-5), and store the generated questions in the folder `experiments/results`.
+This step will generate corresponding questions (prompts) for each method (`dail_sql`, `sspa`, `sspa_geo`, `sspa_sdbms`, `sspa_tips`) across different datasets (`dataset1_ada_edu`, `dataset1_tourism_traffic`, `dataset2_ada_edu`, `dataset2_tourism_traffic`) and scenarios (shot-0, shot-1, shot-3, shot-5), and store the generated questions (prompts) in the folder `experiments/results`.
 
     
     python generate_question.py
@@ -148,7 +148,7 @@ Calling the LLM
 ------
 
    
-This step involves sending the questions generated in the previous step to the LLM in order to generate the corresponding SQL queries. Since there are 80 folders in total, processing them all at once can be time-consuming. Therefore, the questions from each folder can be sent to the LLM individually, and the results will be stored in the respective `answers.json` file within each folder (as shown in the figure above).
+This step involves sending the questions (prompts) generated in the previous step to the LLM in order to generate the corresponding SQL queries. Since there are 80 folders in total, processing them all at once can be time-consuming. Therefore, the questions (prompts) from each folder can be sent to the LLM individually, and the results will be stored in the respective `answers.json` file within each folder (as shown in the figure above).
 <br>
 
     
