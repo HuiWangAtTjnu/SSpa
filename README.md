@@ -25,7 +25,16 @@ Below is an example from the file `QA-ada-56.txt`: <br>
      name:Lake Tai is represented by the name '太湖'.
      SQL: Select Sum(Area)  from lakes where name = '太湖'  %%% Select Sum(Area(Shape, 1))   from lakes where name = '太湖'
      Eval: Select Sum(Area)  from lakes where name = '太湖'  %%% Select Sum(Area(Shape, 1))   from lakes where name = '太湖'
-     id: ada01
+     id: ada01label:Intersection S
+     questionCHI:每个省内1级河流的总长度是多少？
+     evidenceCHI:一条河流由多个同名河段组成，应计算其在各省境内的交汇部分长度。
+     nameCHI:
+     question:What is the total length of all Level 1 rivers within each province?
+     evidence:A river is composed of multiple sections with the same name, and its intersecting lengths within each province should be calculated.
+     name:
+     SQL:Select provinces.name, Sum(GLength(Intersection(provinces.Shape, rivers.Shape), 1))  from provinces inner join rivers On Intersects(provinces.Shape, rivers.Shape) = 1 where level_river = 1 group by provinces.name %%% Select cities.province, Sum(GLength(Intersection(cities.Shape, rivers.Shape), 1))  from cities inner join rivers On Intersects(cities.Shape, rivers.Shape) = 1 where level_river = 1 group by cities.province
+     Eval:Select provinces.name, Sum(GLength(Intersection(provinces.Shape, rivers.Shape), 1))  from provinces inner join rivers On Intersects(provinces.Shape, rivers.Shape) = 1 where level_river = 1 group by provinces.name %%% Select cities.province, Sum(GLength(Intersection(cities.Shape, rivers.Shape), 1))  from cities inner join rivers On Intersects(cities.Shape, rivers.Shape) = 1 where level_river = 1 group by cities.province %%% Select provinces.name, Sum(GLength(Intersection(rivers.Shape, provinces.Shape), 1))  from provinces inner join rivers On Intersects(provinces.Shape, rivers.Shape) = 1 where level_river = 1 group by provinces.name %%% Select cities.province, Sum(GLength(Intersection(rivers.Shape, cities.Shape), 1))  from cities inner join rivers On Intersects(cities.Shape, rivers.Shape) = 1 where level_river = 1 group by cities.province
+     id: ada34
  
 
 
